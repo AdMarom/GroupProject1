@@ -20,6 +20,7 @@ var buttonClickHandler = function (event) {
     }
 };
 
+
 var getEvents = function (events) {
     $.ajax({
         type: "GET",
