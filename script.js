@@ -1,39 +1,30 @@
+var userInput = document.querySelector('#city-search');
+var eventContainerEl = document.querySelector('#event-container');
+var searchCity = document.querySelector('#search-button');
 
-var searchTheCity = document.querySelector('#citySearch');
-var searchButton = document.querySelector('#button');
-var eventContainer = document.querySelector('#event');
+//function for user input
 
-var formSubmitHandler = function (event) {
-    event.preventDefault();
+
+//Fetch Data from TicketMaster API
+function getApi () {
+  var userInputVal = userInput.value
+  console.log(userInput);
+  var requestUrl = "https://app.ticketmaster.com/discovery/v2/events.json?city=" + userInputVal + "&apikey="+ APIKEY;
+fetch(requestUrl)
+
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function(data){
+    console.log(data);
+    
   
-    var citySearch = searchTheCity.value.trim();
-  
-    if (citySearch) {
-      getEvents(citySearch);
-  
-      eventContainer.textContent = '';
-      searchTheCity.value = '';
-    } else {
-      alert('Please enter a City');
-    }
-  };
-
-  var getEvents = function (events) {
-
-  }
-
-    $.ajax({
-    type:"GET",
-    url:"https://app.ticketmaster.com/discovery/v2/events.json?size=100&apikey=StOkfSjg5F7T3VntM28nRbxZCjxQgC2m",
-    async:true,
-    dataType: "json",
-    success: function(json) {
-                console.log(json);
-                // Parse the response.
-                // Do other things.
-             },
-    error: function(xhr, status, err) {
-                // This time, we do not end up here!
-             }
   });
+}
 
+// getApi(requestUrl)
+
+//display / appendchild from search results
+
+//Event Listener for search button
+searchCity.addEventListener('click', getApi);
