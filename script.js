@@ -1,13 +1,11 @@
-var searchInput = document.querySelector('#city-search');
-var searchButton = document.querySelector('#search-button');
-var eventContainer = document.querySelector('#event');
-var selectOption = document.querySelector("#restaurant-select");
+var userInput = document.querySelector('#city-search');
+var eventContainerEl = document.querySelector('#event-container');
+var searchCity = document.querySelector('#search-button');
 
 
 
-var buttonClickHandler = function (event) {
-    event.preventDefault();
 
+<<<<<<< HEAD
     var citySearch = searchInput.value.trim();
     var selectedRestaurant = selectOption.options[selectOption.selectedIndex].text;
 
@@ -68,6 +66,8 @@ var displayEvents = function (events) {
         eventContainer.appendChild(eventEl);
     }
 }
+=======
+>>>>>>> dd921b85168a499c4cb1a4293990a2f9b50a94f2
 
 
 
@@ -79,6 +79,28 @@ function renderMap() {
     }).addTo(map);
 }
 
-searchButton.addEventListener('click', buttonClickHandler);
-
 renderMap();
+
+//Fetch Data from TicketMaster API
+function getApi () {
+  var userInputVal = userInput.value
+  console.log(userInput);
+  var requestUrl = "https://app.ticketmaster.com/discovery/v2/events.json?city=" + userInputVal + "&apikey="+ APIKEY;
+fetch(requestUrl)
+
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function(data){
+    console.log(data);
+    
+  });
+}
+
+// getApi(requestUrl)
+
+//display / appendchild from search results
+
+//Event Listener for search button
+searchCity.addEventListener('click', getApi);
+
