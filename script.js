@@ -3,13 +3,36 @@ var cityInput = document.querySelector('#city-search');
 var eventContainerEl = document.querySelector('#event-container');
 var searchCity = document.querySelector('#search-button');
 
-function renderMap() {
-    var map = L.map('map').setView([51.505, -0.09], 13);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
+//Fetch Data from TicketMaster API
+    .then(function(data){
+        console.log(data);
+        for(var i = 0; i < data._embedded.events.length; i++) {
+            
+            var lat = data._embedded.events[i]._embedded.venues[0].location.latitude;
+            var lon = data._embedded.events[i]._embedded.venues[0].location.longitude;
+            console.log(lat);
+            console.log(lon);
+            
+            
+        }
+        // renderMap(lon,lat);
+        
+        var map = L.map('map').setView([lat, lon], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution:'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        var marker = L.marker([lat, lon]).addTo(map);
+        console.log (marker);
+    });
 }
+
+
+
+
+
+
+
 
 renderMap();
 
@@ -37,6 +60,7 @@ function showEvents(json) {
     $("#event-container").append("<p>"+event.name+"</p>"+"<p>"+event.dates.start.localDate+"</p>");
   }
 }
+
 // getApi(requestUrl)
 
 //display / appendchild from search results
