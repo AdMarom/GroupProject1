@@ -1,12 +1,7 @@
-var userInput = document.querySelector('#city-search');
+var segmentInput = document.querySelector('#event-select');
+var cityInput = document.querySelector('#city-search');
 var eventContainerEl = document.querySelector('#event-container');
 var searchCity = document.querySelector('#search-button');
-
-
-
-
-
-
 
 function renderMap() {
     var map = L.map('map').setView([51.505, -0.09], 13);
@@ -20,9 +15,11 @@ renderMap();
 
 //Fetch Data from TicketMaster API
 function getApi () {
-  var userInputVal = userInput.value
-  console.log(userInput);
-  var requestUrl = "https://app.ticketmaster.com/discovery/v2/events.json?city=" + userInputVal + "&apikey="+ APIKEY;
+  var segmentInputVal = segmentInput.value
+  var cityInputVal = cityInput.value
+  console.log(cityInput);
+  var requestUrl = "https://app.ticketmaster.com/discovery/v2/events.json?city=" 
+  + cityInputVal + "&classificationName=" + segmentInputVal + "&apikey=" + APIKEY;
 fetch(requestUrl)
 
   .then(function (response) {
