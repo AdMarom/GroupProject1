@@ -1,5 +1,4 @@
 # GroupProject1
-#description 
 
 ## Resources 
 
