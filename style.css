@@ -12,14 +12,6 @@ h1 a{
 body {
     display: block;
     background-color: #F5E0C4;
-    
-}
-
-
-main{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
 }
 
 header {
@@ -28,7 +20,6 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #dcbd9d;
-    width: 100%;
 }
 
 ul {
@@ -84,10 +75,9 @@ h3{
 
 .content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 42px
+    padding: 42px;
         /* background-color: antiquewhite; */
 }
 
@@ -104,7 +94,6 @@ p {
 }
 
 .signup {
-
     height: 53px;
     width: 18rem;
     font-size: 18px;
@@ -121,11 +110,10 @@ p {
 }
 
 
-
 .placeholder {
     padding-bottom: 30px;
     padding: 9rem;
-    padding-left: 5rem;
+    padding-left: 40rem;
 }
 
 .placeholder input {
@@ -134,7 +122,6 @@ p {
 }
 
 input {
-    
     width: 53rem;
     height: 5rem;
     font-size: 30px;
@@ -144,11 +131,10 @@ input {
 }
 
 select {
-    
     width: 53rem;
     height: 5rem;
     font-size: 30px;
-    display: flex;
+    display: block;
     padding: 10px;
     border-radius: 5px;
     padding-bottom: 10px;
@@ -163,7 +149,6 @@ select {
 .space {
     padding-bottom: 10px;
     padding-top: 10px;
-
 }
 
 button{
@@ -181,7 +166,6 @@ button:hover {
     background-color: rgb(177, 120, 111);
     box-shadow: 2px 3px 3px rgb(56, 26, 26);
 }
-
 
 .footer {
     background-color: #dcbd9d;
@@ -226,55 +210,37 @@ button:hover {
         color: rgb(216, 135, 135);
     }
 
-    #map {
-        height: 22rem; 
-        width: 50rem;
-        margin-bottom: 10px;
+    @media screen and (max-width: 1000px){
+        select {
+             width: 500px;
+         }
+        input {
+           width: 500px;
+         }
+         #event-container{
+           width: 500px;
+         }
+           #map{
+             width: 500px;
+         }
+         ul {
+           padding-top: 0%;
+         }
        }
-
-
-.footer {
-    background-color: #dcbd9d;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-}
-
-
-@media screen and (max-width: 1000px){
- select {
-   width: 500px;
-  }
- input {
-    width: 500px;
-  }
-  #event-container{
-    width: 500px;
-  }
-    #map{
-      width: 500px;
-  }
-  ul {
-    padding-top: 0%;
-  }
-}
-
-@media screen and (max-width: 550px){
-    select {
-      width: 400px;
-     }
-    input {
-       width: 400px;
-     }
-     #event-container{
-       width: 400px;
-     }
-       #map{
-         width: 400px;
-     }
-     ul {
-       padding-top: 0%;
-     }
-
-   }
-   
+       @media screen and (max-width: 550px){
+           select {
+             width: 400px;
+            }
+           input {
+              width: 400px;
+            }
+            #event-container{
+              width: 400px;
+            }
+              #map{
+                width: 400px;
+            }
+            ul {
+              padding-top: 0%;
+            }
+          }
