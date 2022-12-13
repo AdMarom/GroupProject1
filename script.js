@@ -3,32 +3,22 @@ var categoryInput = document.querySelector('#event-select');
 var cityInput = document.querySelector('#city-search');
 var eventContainerEl = document.querySelector('#event-container');
 var searchCity = document.querySelector('#search-button');
-var searchStartDate = document.querySelector('#start-date-search');
-var searchEndDate = document.querySelector('#end-date-search');
-
 //Fetch Data from TicketMaster API
 function getApi() {
     var categoryInputVal = categoryInput.value
     var cityInputVal = cityInput.value
-    var searchStartDateVal = searchStartDate.value
-    var searchEndDateVal = searchEndDate.value
-    console.log(cityInputVal);
-    console.log(searchStartDateVal);
-    console.log(searchEndDateVal);
-    var requestUrl = "https://app.ticketmaster.com/discovery/v2/events.json?size=7" + "&city=" 
-    + cityInputVal + "&classificationName=" + categoryInputVal + "&startDateTime=" + searchStartDateVal + "&apikey=" + APIKEY;
+    console.log(cityInput);
+    var requestUrl = "https://app.ticketmaster.com/discovery/v2/events.json?size=8&city="
+    + cityInputVal + "&classificationName=" + categoryInputVal + "&apikey=" + APIKEY;
     fetch(requestUrl)
     .then(function (response) {
         return response.json();
     })
-
     //this will display the data in the console
     .then(function (data) {
         console.log(data);
         showEvents(data);
         mapMarker(data._embedded.events);
-       
-
         
         //this is a for loop to get the latitude and longitude of the event
         //This will be the map 
@@ -67,18 +57,14 @@ function getApi() {
             for (var i = 0; i < json.page.size; i++) {
                 var event = json._embedded.events[i];
                 $("#event-container").append(`<p>` + event.name + "</p>" + "<a target='_blank' href='https://www.ticketmaster.com/'>" + event.dates.start.localDate + "</a>");
-
-                // if (apiEvent){
-                //     eventContainerEl.remove();
-                // }
             }
         }
-      }
+        // doFoo.onclick = () => {
+        //     const ClearTxt = document.getElementById('#event-container');
+        //     ClearTxt.textContent = '';
+        //   }
+          
+    }
     //Event Listener for search button
     searchCity.addEventListener('click', getApi);
     
-
-
-
-
-
