@@ -3,23 +3,32 @@ var categoryInput = document.querySelector('#event-select');
 var cityInput = document.querySelector('#city-search');
 var eventContainerEl = document.querySelector('#event-container');
 var searchCity = document.querySelector('#search-button');
+var searchStartDate = document.querySelector('#start-date-search');
+var searchEndDate = document.querySelector('#end-date-search');
 
 //Fetch Data from TicketMaster API
 function getApi() {
     var categoryInputVal = categoryInput.value
     var cityInputVal = cityInput.value
-    console.log(cityInput);
-    var requestUrl = "https://app.ticketmaster.com/discovery/v2/events.json?size=7&city="
-    + cityInputVal + "&classificationName=" + categoryInputVal + "&apikey=" + APIKEY;
+    var searchStartDateVal = searchStartDate.value
+    var searchEndDateVal = searchEndDate.value
+    console.log(cityInputVal);
+    console.log(searchStartDateVal);
+    console.log(searchEndDateVal);
+    var requestUrl = "https://app.ticketmaster.com/discovery/v2/events.json?size=7" + "&city=" 
+    + cityInputVal + "&classificationName=" + categoryInputVal + "&startDateTime=" + searchStartDateVal + "&apikey=" + APIKEY;
     fetch(requestUrl)
     .then(function (response) {
         return response.json();
     })
+
     //this will display the data in the console
     .then(function (data) {
         console.log(data);
         showEvents(data);
         mapMarker(data._embedded.events);
+       
+
         
         //this is a for loop to get the latitude and longitude of the event
         //This will be the map 

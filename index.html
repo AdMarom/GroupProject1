@@ -18,10 +18,12 @@
     <title>What's Good</title>
 </head>
 
-<body>
+<body class="body">
+    
 
-    <header>
+    <header class="header">
         <h1><a href="#"> What's Good</a></h1>
+       
 
         <div class="nav">
             <ul>
@@ -30,20 +32,17 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
+        
     </header>
 
     <div class="content" id="About">
-        <p id="response-text">Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad
-            putent delectus
-            delicata usu.
-            Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an.
-            Per facer affert ut. Mei iisque mentitum moderatius cu.
+        <p  id="response-text">
+           Find events in your city. 
+           Search concerts, sporting events, and theatre by city.
         </p>
-        <div class="input">
-            <!-- <button>Login/Sign Up</button> -->
-            <input class="signup" type="submit" value="Login/Sign Up">
-        </div>
+
     </div>
+  
     <main class="main">
         <div class="placeholder">
             <div class="space">
@@ -59,8 +58,11 @@
                 <button type="click" id="search-button"> Search </button>
             </div>
 
-            <div class="main" id="event-container"></div>
-            <div id="map"></div>
+        <input type="text" placeholder="City" id="city-search">
+        <input type="datetime-local" id="start-date-search">
+        <input type="datetime-local" id="end-date-search">
+        <div class="space">  
+            <button type="click" id="search-button"> Search </button>
         </div>
     </main>
 
