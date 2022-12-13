@@ -11,7 +11,6 @@ h1 a{
 
 body {
     display: block;
-    flex-wrap: wrap;
     background-color: #F5E0C4;
     
 }
@@ -71,6 +70,18 @@ h1 a:hover {
     box-shadow: 1px 5px 4px rgb(56, 26, 26);
 }
 
+h2{
+    font-size: 35px;
+    padding-left: 47px;
+    color: rgb(106, 102, 96);
+}
+
+h3{
+    font-size: 40px;
+    font-style: italic;
+    color: rgb(127, 122, 114);
+}
+
 .content {
     display: flex;
     flex-wrap: wrap;
@@ -82,8 +93,9 @@ h1 a:hover {
 
 p {
     margin: 20px;
-    font-size: 30px;
-    /* color: rgb(68, 64, 60); */
+    font-size: 35px;
+    color: rgb(68, 64, 60);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-right: 15rem;
 }
 
@@ -157,7 +169,7 @@ select {
 button{
     width: 15rem;
     height: 3.7rem;
-    font-size: 20px;
+    font-size: 25px;
     padding: 11px;
     background-color: rgb(130, 61, 61);
     color: #edf0f1;
@@ -174,6 +186,12 @@ button:hover {
 .footer {
     background-color: #dcbd9d;
     padding: 10px;
+}
+
+.contact {
+   margin-left: 77rem;
+    font-size: 20px;
+    color: rgb(68, 64, 60);
 }
 
 #map {

@@ -15,7 +15,7 @@ function getApi() {
     console.log(cityInputVal);
     console.log(searchStartDateVal);
     console.log(searchEndDateVal);
-    var requestUrl = "https://app.ticketmaster.com/discovery/v2/events.json?size=7" + "&city=" 
+    var requestUrl = "https://app.ticketmaster.com/discovery/v2/events.json?size=8" + "&city=" 
     + cityInputVal + "&classificationName=" + categoryInputVal + "&startDateTime=" + searchStartDateVal + "&apikey=" + APIKEY;
     fetch(requestUrl)
     .then(function (response) {
@@ -67,10 +67,6 @@ function getApi() {
             for (var i = 0; i < json.page.size; i++) {
                 var event = json._embedded.events[i];
                 $("#event-container").append(`<p>` + event.name + "</p>" + "<a target='_blank' href='https://www.ticketmaster.com/'>" + event.dates.start.localDate + "</a>");
-
-                // if (apiEvent){
-                //     eventContainerEl.remove();
-                // }
             }
         }
       }
