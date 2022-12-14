@@ -46,20 +46,17 @@
     <main class="main">
         <div class="placeholder">
             <div class="space">
-            <select name="select" id="event-select">
-                <option value="" disabled selected>Select</option>
-
-                <option value="Music">Music</option>
-                <option value="Sports">Sports</option>
-                <option value="Theatre">Theatre</option>
-   
-            </select>
-        </div>
-        <input type="text" placeholder="City" id="city-search">
-        <div class="space">  
-            <button type="click" id="search-button"> Search </button>
-
-        </div>
+                <select name="select" id="event-select">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Music">Music</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Arts & Theatre">Arts & Theatre</option>
+                </select>
+            </div>
+            <input type="text" placeholder="City" id="city-search">
+            <div class="space">
+                <button id="search-button"> Search </button>
+            </div>
 
             <div class="main" id="event-container"></div>
             <div id="map"></div>
