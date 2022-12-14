@@ -55,6 +55,7 @@ function getApi() {
         function showEvents(json) {
             for (var i = 0; i < json.page.size; i++) {
                 var event = json._embedded.events[i];
+
                var container = $("#event-container").append('<div id="local-storage">' + `<p>` + event.name + "</p>" + "<a target='_blank' href='https://www.ticketmaster.com/'>" + event.dates.start.localDate + "</a>" + '<button id="save-button">Save Event</button>' + '</div>');
                 var saveResults = document.querySelector('#local-storage')
             
@@ -76,10 +77,10 @@ function getApi() {
 
 
 
+
           
     }
     //Event Listener for search button
     searchCity.addEventListener('click', getApi);
-    
 
     
