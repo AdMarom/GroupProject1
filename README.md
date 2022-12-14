@@ -6,25 +6,6 @@ What’s Good is a web page that allows users to find events going on in a parti
 
 We built this website to make it easier for everyday busy people to easily find a fun event to attend without spending time reaseaching. 
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
-## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
 ## Usage
 
@@ -45,8 +26,8 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-Max's Github profile:
-Adena's Github profile:
+Max's Github profile: https://github.com/MaxMaxS-98
+Adena's Github profile: https://github.com/AdMarom
 Eva's Github profile: https://github.com/evasatsuki
 
 APIs used:
