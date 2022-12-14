@@ -11,16 +11,7 @@ h1 a{
 
 body {
     display: block;
-    flex-wrap: wrap;
     background-color: #F5E0C4;
-    
-}
-
-
-main{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
 }
 
 header {
@@ -29,7 +20,6 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #dcbd9d;
-    width: 100%;
 }
 
 ul {
@@ -71,19 +61,31 @@ h1 a:hover {
     box-shadow: 1px 5px 4px rgb(56, 26, 26);
 }
 
+h2{
+    font-size: 35px;
+    padding-left: 47px;
+    color: rgb(106, 102, 96);
+}
+
+h3{
+    font-size: 40px;
+    font-style: italic;
+    color: rgb(127, 122, 114);
+}
+
 .content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 42px
+    padding: 42px;
         /* background-color: antiquewhite; */
 }
 
 p {
     margin: 20px;
-    font-size: 30px;
-    /* color: rgb(68, 64, 60); */
+    font-size: 35px;
+    color: rgb(68, 64, 60);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-right: 15rem;
 }
 
@@ -92,7 +94,6 @@ p {
 }
 
 .signup {
-
     height: 53px;
     width: 18rem;
     font-size: 18px;
@@ -109,11 +110,10 @@ p {
 }
 
 
-
 .placeholder {
     padding-bottom: 30px;
     padding: 9rem;
-    padding-left: 5rem;
+    padding-left: 40rem;
 }
 
 .placeholder input {
@@ -122,7 +122,6 @@ p {
 }
 
 input {
-    
     width: 53rem;
     height: 5rem;
     font-size: 30px;
@@ -132,11 +131,10 @@ input {
 }
 
 select {
-    
     width: 53rem;
     height: 5rem;
     font-size: 30px;
-    display: flex;
+    display: block;
     padding: 10px;
     border-radius: 5px;
     padding-bottom: 10px;
@@ -151,13 +149,12 @@ select {
 .space {
     padding-bottom: 10px;
     padding-top: 10px;
-
 }
 
 button{
     width: 15rem;
     height: 3.7rem;
-    font-size: 20px;
+    font-size: 25px;
     padding: 11px;
     background-color: rgb(130, 61, 61);
     color: #edf0f1;
@@ -170,10 +167,15 @@ button:hover {
     box-shadow: 2px 3px 3px rgb(56, 26, 26);
 }
 
-
 .footer {
     background-color: #dcbd9d;
     padding: 10px;
+}
+
+.contact {
+   margin-left: 77rem;
+    font-size: 20px;
+    color: rgb(68, 64, 60);
 }
 
 #map {
@@ -208,55 +210,37 @@ button:hover {
         color: rgb(216, 135, 135);
     }
 
-    #map {
-        height: 22rem; 
-        width: 50rem;
-        margin-bottom: 10px;
+    @media screen and (max-width: 1000px){
+        select {
+             width: 500px;
+         }
+        input {
+           width: 500px;
+         }
+         #event-container{
+           width: 500px;
+         }
+           #map{
+             width: 500px;
+         }
+         ul {
+           padding-top: 0%;
+         }
        }
-
-
-.footer {
-    background-color: #dcbd9d;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-}
-
-
-@media screen and (max-width: 1000px){
- select {
-   width: 500px;
-  }
- input {
-    width: 500px;
-  }
-  #event-container{
-    width: 500px;
-  }
-    #map{
-      width: 500px;
-  }
-  ul {
-    padding-top: 0%;
-  }
-}
-
-@media screen and (max-width: 550px){
-    select {
-      width: 400px;
-     }
-    input {
-       width: 400px;
-     }
-     #event-container{
-       width: 400px;
-     }
-       #map{
-         width: 400px;
-     }
-     ul {
-       padding-top: 0%;
-     }
-
-   }
-   
+       @media screen and (max-width: 550px){
+           select {
+             width: 400px;
+            }
+           input {
+              width: 400px;
+            }
+            #event-container{
+              width: 400px;
+            }
+              #map{
+                width: 400px;
+            }
+            ul {
+              padding-top: 0%;
+            }
+          }
