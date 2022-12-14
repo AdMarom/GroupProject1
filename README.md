@@ -1,5 +1,8 @@
 # What's Good
 
+### Link to Deployed Page
+https://admarom.github.io/WhatsGood-SearchEvents/
+
 ## Description
 
 What’s Good is a web page that allows users to find events going on in a particular city in the US.  Just input your city name and select a category among Music, Sports or Arts & Theatre to see the results.  You will get a list of events from the selected category in your city!  Also check out the map to see where in the city the event is taking place.
@@ -23,7 +26,6 @@ Screenshots:
 ![alt text](assets/images/Screen%20Shot%202022-12-13%20at%209.43.44%20PM%20(2).png)
 ![alt text](assets/images/Screen%20Shot%202022-12-13%20at%209.43.58%20PM%20(2).png)
 ![alt text](assets/images/Screen%20Shot%202022-12-13%20at%209.44.05%20PM%20(2).png)
-Provide instructions and examples for use. Include screenshots as needed.
 
 
 ## Credits
@@ -36,6 +38,7 @@ Eva's Github profile: https://github.com/evasatsuki
 
 
 APIs used:
+    
     Ticketmaster: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#anchor_find
 
     OpenStreetMap: https://leafletjs.com/
@@ -44,5 +47,7 @@ APIs used:
 ## Resources 
 
 youtube tutorial: https://www.youtube.com/watch?v=D4FdL1O1cYk
+
 ticketmaster: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#event-details-v2
+
 API Root URL https://app.ticketmaster.com/discovery/v2/
