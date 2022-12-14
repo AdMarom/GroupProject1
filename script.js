@@ -39,7 +39,6 @@ function getApi() {
             }
             
             //This will be the marker for the map
-            
             //this will be the circle for the map
             var circle = L.circle([lat, lon], {
                 color: 'red',
@@ -56,15 +55,32 @@ function getApi() {
         function showEvents(json) {
             for (var i = 0; i < json.page.size; i++) {
                 var event = json._embedded.events[i];
-                $("#event-container").append(`<p>` + event.name + "</p>" + "<a target='_blank' href='https://www.ticketmaster.com/'>" + event.dates.start.localDate + "</a>");
-            }
+
+               var container = $("#event-container").append('<div id="local-storage">' + `<p>` + event.name + "</p>" + "<a target='_blank' href='https://www.ticketmaster.com/'>" + event.dates.start.localDate + "</a>" + '<button id="save-button">Save Event</button>' + '</div>');
+                var saveResults = document.querySelector('#local-storage')
+            
+        
+
+        //This button will save search results to local storage
+ 
+        $(container).on('click', '#save-button', function(){
+           localStorage.setItem('event', saveResults.innerHTML);
+           
+        })
+    }
         }
-        // doFoo.onclick = () => {
-        //     const ClearTxt = document.getElementById('#event-container');
-        //     ClearTxt.textContent = '';
-        //   }
+
+       
+
+        
+        
+
+
+
+
           
     }
     //Event Listener for search button
     searchCity.addEventListener('click', getApi);
+
     
