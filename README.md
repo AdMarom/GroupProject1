@@ -2,7 +2,9 @@
 
 ## Description
 
+What’s Good is a web page that allows users to find events going on in a particular city in the US.  Just input your city name and select a category among Music, Sports or Arts & Theatre to see the results.  You will get a list of events from the selected category in your city!  Also check out the map to see where in the city the event is taking place.
 
+We built this website to make it easier for everyday busy people to easily find a fun event to attend without spending time reaseaching. 
 
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
@@ -26,6 +28,13 @@ What are the steps required to install your project? Provide a step-by-step desc
 
 ## Usage
 
+(1) Select a category among Music, Sports, and Arts & Theatre
+(2) Type in a US city
+(3) Click search
+You will see eight search results with the name of the event, the date the event is taking place, and a link to the ticketmaster website to purchase tickets.  There is also a map at the bottom of the page with pins to show where in the city the events are happening.
+
+Screenshots:
+
 Provide instructions and examples for use. Include screenshots as needed.
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
@@ -35,6 +44,17 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ```
 
 ## Credits
+
+Max's Github profile:
+Adena's Github profile:
+Eva's Github profile: https://github.com/evasatsuki
+
+APIs used:
+    Ticketmaster: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#anchor_find
+    OpenStreetMap: https://leafletjs.com/
+    
+Tutorials:
+
 
 List your collaborators, if any, with links to their GitHub profiles.
 
