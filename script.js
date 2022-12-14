@@ -65,6 +65,7 @@ function getApi() {
  
         $(container).on('click', '#save-button', function(){
            localStorage.setItem('event', saveResults.innerHTML);
+            document.getElementById("saved-results-here").innerHTML = localStorage.event;
            
         })
     }
