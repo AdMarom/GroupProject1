@@ -10,36 +10,39 @@ We built this website to make it easier for everyday busy people to easily find 
 ## Usage
 
 (1) Select a category among Music, Sports, and Arts & Theatre
+
 (2) Type in a US city
+
 (3) Click search
+
 You will see eight search results with the name of the event, the date the event is taking place, and a link to the ticketmaster website to purchase tickets.  There is also a map at the bottom of the page with pins to show where in the city the events are happening.
 
 Screenshots:
 
+![alt text](assets/images/Screen%20Shot%202022-12-13%20at%209.43.37%20PM.png)
+![alt text](assets/images/Screen%20Shot%202022-12-13%20at%209.43.44%20PM%20(2).png)
+![alt text](assets/images/Screen%20Shot%202022-12-13%20at%209.43.58%20PM%20(2).png)
+![alt text](assets/images/Screen%20Shot%202022-12-13%20at%209.44.05%20PM%20(2).png)
 Provide instructions and examples for use. Include screenshots as needed.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## Credits
 
 Max's Github profile: https://github.com/MaxMaxS-98
+
 Adena's Github profile: https://github.com/AdMarom
+
 Eva's Github profile: https://github.com/evasatsuki
+
 
 APIs used:
     Ticketmaster: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#anchor_find
+
     OpenStreetMap: https://leafletjs.com/
     
 
----
-
-
 ## Resources 
 
-// youtube tutorial: https://www.youtube.com/watch?v=D4FdL1O1cYk
-//ticketmaster: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#event-details-v2
-//API Root URL https://app.ticketmaster.com/discovery/v2/
+youtube tutorial: https://www.youtube.com/watch?v=D4FdL1O1cYk
+ticketmaster: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/#event-details-v2
+API Root URL https://app.ticketmaster.com/discovery/v2/

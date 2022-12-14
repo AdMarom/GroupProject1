@@ -83,5 +83,4 @@ function getApi() {
     }
     //Event Listener for search button
     searchCity.addEventListener('click', getApi);
-
     
